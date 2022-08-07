@@ -2,10 +2,12 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 // import './FirebaseConfig'
+import {MatterStepOne} from './matterpractice'
 
 export function App() {
   return (
     <div className="flexbox">
+       <MatterStepOne></MatterStepOne>
       <section className="side">
 
       </section>
@@ -22,6 +24,7 @@ export function App() {
         </nav>
         <p>酒瓶置き場</p>
         <button>酒追加</button>
+        
       </article>
       <section className="side">
       </section>
