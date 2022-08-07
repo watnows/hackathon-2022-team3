@@ -1,7 +1,9 @@
 import './Servise.css'
+import {MatterStepOne} from './matterpractice'
 export const Service = () => {
-    return(
-        <div className="flexbox">
+  return (
+    <div className="flexbox">
+      <MatterStepOne></MatterStepOne>
       <section className="side">
 
       </section>
@@ -21,5 +23,5 @@ export const Service = () => {
       <section className="side">
       </section>
     </div>
-    )
+  )
 }

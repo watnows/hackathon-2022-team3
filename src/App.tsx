@@ -1,12 +1,11 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import {MatterStepOne} from './matterpractice'
+
 
 export function App() {
   return (
     <div className="flexbox">
-      <MatterStepOne></MatterStepOne>
       <section className="side">
 
       </section>
