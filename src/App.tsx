@@ -25,6 +25,7 @@ export function App() {
         <p>酒瓶置き場</p>
         
         <a href='./liquoredit'>お酒の追加</a>
+        <a href='./liquorslider'>酒スライダー</a>
       </article>
       <section className="side">
       </section>

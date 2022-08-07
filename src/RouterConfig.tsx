@@ -5,6 +5,7 @@ import { Service } from "./Service";
 import { Users } from "./Users ";
 import { Reccomend } from "./Reccomend";
 import { Liquoredit } from "./Liquoredit";
+import { Liquorslider } from "./Liquorslider";
 
 export const RouterConfig: React.VFC = () => {
     return (
@@ -17,6 +18,7 @@ export const RouterConfig: React.VFC = () => {
                     <Route path="users" element={<Users />} />
                     <Route path="reccomend" element={<Reccomend />} />
                     <Route path="liquoredit" element={<Liquoredit />} />
+                    <Route path="liquorslider" element={<Liquorslider/>} />
                 </Routes>
             </BrowserRouter>
         </>
