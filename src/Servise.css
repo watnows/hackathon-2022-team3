@@ -38,6 +38,7 @@
   }
   @media ( min-width : 600px ){
     .flexbox {
+      height: 100%;
     display: -webkit-flex;
     display: flex;
     }
