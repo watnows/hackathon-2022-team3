@@ -4,6 +4,8 @@ import { App } from "./App"
 import { Service } from "./Service";
 import { Users } from "./Users ";
 import { Reccomend } from "./Reccomend";
+// import SignUp from "./SignUp";
+// import SignIn from "./SignIn";
 
 export const RouterConfig: React.VFC = () => {
     return (
@@ -15,6 +17,8 @@ export const RouterConfig: React.VFC = () => {
                     <Route path="service" element={<Service />} />
                     <Route path="users" element={<Users />} />
                     <Route path="reccomend" element={<Reccomend />} />
+                    {/* <Route path="signup" element={<SignUp />} />
+                    <Route path="login" element={<SignIn />} /> */}
                 </Routes>
             </BrowserRouter>
         </>
