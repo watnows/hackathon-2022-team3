@@ -2,23 +2,28 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-function App() {
+export function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="flexbox">
+      <section className="side">
+
+      </section>
+      <article className="main">
+        <h1>サイト名</h1>
+        <nav>
+          <ul>
+            <li><a href="#">HOME</a></li>
+            <li><a href="/service">サービス紹介</a></li>
+            <li><a href="#">最新情報</a></li>
+            <li><a href="#">ブログ</a></li>
+            <li><a href="#">お問い合わせ</a></li>
+          </ul>
+        </nav>
+
+
+      </article>
+      <section className="side">
+      </section>
     </div>
   );
 }
