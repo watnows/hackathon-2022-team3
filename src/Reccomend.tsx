@@ -1,4 +1,5 @@
 import './Reccomend.css'
+import { Header } from './ Header'
 export const Reccomend = () => {
     return(
         <div className="flexbox">
@@ -6,19 +7,8 @@ export const Reccomend = () => {
 
       </section>
       <article className="main">
-        <h1>サイト名</h1>
-        <nav>
-          <ul>
-            <li><a href="/liquor">酒瓶</a></li>
-            <li><a href="/empty_bottle">空瓶</a></li>
-            <li><a href="./users">ユーザ</a></li>
-            <li><a href="./reccomend">おすすめ</a></li>
-          </ul>
-        </nav>
+        <Header></Header>
         <p>おすすめの酒</p>
-
-        
-
       </article>
       <section className="side">
       </section>

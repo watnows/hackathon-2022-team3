@@ -1,18 +1,27 @@
 import React from 'react';
-import { Header } from './ Header';
+import logo from './logo.svg';
 import './App.css';
-import './FirebaseConfig'
+import { Header } from './ Header';
+
 
 export function App() {
   return (
-    <div>
-    <Header></Header>
+    <div className="flexbox">
+      <section className="side">
 
-    <p>酒瓶置き場</p>
+      </section>
+      <article className="main">
+        <Header></Header>
+        <p>酒瓶置き場</p>
         
-    <a href='./liquoredit'>お酒の追加</a>
-    <a href='./liquorslider'>酒スライダー</a>
+        <a href='./liquoredit'>お酒の追加</a>
+        <a href='./liquorslider'>酒スライダー</a>
+      </article>
+      <section className="side">
+      </section>
     </div>
+
+
   );
 }
 

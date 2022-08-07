@@ -1,5 +1,6 @@
 import './EmptyBottle.css'
 import {MatterStepOne} from './matterpractice'
+import { Header } from './ Header'
 export const EmptyBottle = () => {
   return (
     <div className="flexbox">
@@ -8,15 +9,7 @@ export const EmptyBottle = () => {
 
       </section>
       <article className="main">
-        <h1>サイト名</h1>
-        <nav>
-          <ul>
-            <li><a href="/liquor">酒瓶</a></li>
-            <li><a href="/empty_bottle">空瓶</a></li>
-            <li><a href="./users">ユーザ</a></li>
-            <li><a href="./reccomend">おすすめ</a></li>
-          </ul>
-        </nav>
+        <Header></Header>
         <p>空瓶のページ</p>
 
       </article>
