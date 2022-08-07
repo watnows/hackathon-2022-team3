@@ -95,15 +95,9 @@ export const Liquorslider = () => {
                 <img alt="icon" src={png} />
               </div>
             )}
-
-
             <p>{sliderheight}</p>
           </div>
         </div>
-
-
-
-
       </article>
       <section className="side">
       </section>

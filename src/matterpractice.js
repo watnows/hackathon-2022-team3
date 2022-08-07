@@ -29,7 +29,7 @@ export const MatterStepOne = () => {
       options: {
         width: window.innerWidth,
         height: window.innerHeight,
-        background: 'rgba(255, 0, 0, 0.5)',
+        background: 'rgba(255, 255, 255)',
         wireframes: false
       }
     });
