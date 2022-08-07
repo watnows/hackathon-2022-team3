@@ -23,8 +23,7 @@ export function App() {
           </ul>
         </nav>
         <p>酒瓶置き場</p>
-        <button>酒追加</button>
-        
+        <a href='./liquredit'>お酒の追加</a>
       </article>
       <section className="side">
       </section>
