@@ -10,7 +10,7 @@ export const Reccomend = () => {
         <nav>
           <ul>
             <li><a href="/liqur">酒瓶</a></li>
-            <li><a href="/service">空瓶</a></li>
+            <li><a href="/empty_bottle">空瓶</a></li>
             <li><a href="./users">ユーザ</a></li>
             <li><a href="./reccomend">おすすめ</a></li>
           </ul>

@@ -96,7 +96,7 @@ export const MatterStepOne = () => {
     setInterval(() => {
       // let img = new Image(100,100)
       // let imgurl = img.toDataURL("./logo.svg")
-      var ball = Bodies.rectangle(getRandomInt(450, 550), 0, 30, 90, {
+      var ball = Bodies.rectangle(getRandomInt(450, 800), 0, 40, 120, {
         restitution: 0.9,
         render: {
             //  fillStyle: 'yellow'

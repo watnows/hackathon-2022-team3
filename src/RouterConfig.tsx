@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { App } from "./App"
-import { Service } from "./Service";
+import { EmptyBottle } from "./EmptyBottle";
 import { Users } from "./Users ";
 import { Reccomend } from "./Reccomend";
 import { Liquorslider } from "./Liquorslider";
@@ -13,10 +13,9 @@ export const RouterConfig: React.VFC = () => {
                 <Routes>
                     <Route index element={<App />} />
                     <Route path="liquor" element={<App />} />
-                    <Route path="service" element={<Service />} />
+                    <Route path="empty_bottle" element={<EmptyBottle />} />
                     <Route path="users" element={<Users />} />
                     <Route path="reccomend" element={<Reccomend />} />
-                
                     <Route path="liquorslider" element={<Liquorslider/>} />
                 </Routes>
             </BrowserRouter>
