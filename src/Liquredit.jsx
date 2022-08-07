@@ -1,5 +1,6 @@
 import './Liquredit.css'
 import React, { useState } from 'react';
+import React, { Component } from "react"
 export const Liquredit = () => {
     const [name, setName] = useState('');
     const [addtexts, setTexts] = useState([]);
@@ -31,13 +32,7 @@ export const Liquredit = () => {
                 </nav>
                 <p>酒追加のページ</p>
                 <p>お酒の名前</p>
-                <div>
-                    <input type="text" value={name} onChange={handleNameChange} />
-                    <button onClick={handleSubmit} >追加</button>
-                </div>
-                <ul>
-                {addtexts.map((food,i)=> <li key={i}>{food}</li>)}
-              </ul>
+                
             </article>
             <section className="side">
             </section>
