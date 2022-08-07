@@ -12,14 +12,13 @@ export function App() {
         <h1>サイト名</h1>
         <nav>
           <ul>
-            <li><a href="#">HOME</a></li>
-            <li><a href="/service">サービス紹介</a></li>
-            <li><a href="#">最新情報</a></li>
-            <li><a href="#">ブログ</a></li>
-            <li><a href="#">お問い合わせ</a></li>
+            <li><a href="liqur">酒瓶</a></li>
+            <li><a href="/service">空瓶</a></li>
+            <li><a href="./users">ユーザ</a></li>
+            <li><a href="./reccomend">おすすめ</a></li>
           </ul>
         </nav>
-
+        <p>酒瓶置き場</p>
 
       </article>
       <section className="side">

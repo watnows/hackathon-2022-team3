@@ -1,5 +1,5 @@
-import './Servise.css'
-export const Service = () => {
+import './Users.css'
+export const Users = () => {
     return(
         <div className="flexbox">
       <section className="side">
@@ -15,7 +15,7 @@ export const Service = () => {
             <li><a href="./reccomend">おすすめ</a></li>
           </ul>
         </nav>
-        <p>空瓶のページ</p>
+        <p>ユーザのページ</p>
 
       </article>
       <section className="side">
@@ -23,3 +23,4 @@ export const Service = () => {
     </div>
     )
 }
+  

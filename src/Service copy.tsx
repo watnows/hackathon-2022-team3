@@ -1,5 +1,5 @@
-import './Servise.css'
-export const Service = () => {
+import './Reccomend.css'
+export const Reccomend = () => {
     return(
         <div className="flexbox">
       <section className="side">
