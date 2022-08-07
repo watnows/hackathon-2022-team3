@@ -20,6 +20,7 @@ export const Users = () => {
       </article>
       <section className="side">
       </section>
+      
     </div>
     )
 }

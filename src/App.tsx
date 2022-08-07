@@ -6,7 +6,7 @@ import {MatterStepOne} from './matterpractice'
 export function App() {
   return (
     <div className="flexbox">
-       <MatterStepOne></MatterStepOne>
+      <MatterStepOne></MatterStepOne>
       <section className="side">
 
       </section>
@@ -22,7 +22,9 @@ export function App() {
           </ul>
         </nav>
         <p>酒瓶置き場</p>
-        <button>酒追加</button>
+        <button>酒追</button>
+        <br></br>
+        
         
       </article>
       <section className="side">

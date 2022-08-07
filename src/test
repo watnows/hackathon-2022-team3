@@ -1,0 +1,66 @@
+#javascript test_matter.js
+window.onload = function() {
+
+    var Engine = Matter.Engine,
+       World = Matter.World,
+       Bodies = Matter.Bodies;
+    
+       // Matter.js エンジン作成
+    var engine = Engine.create(document.body, {
+        render: { //レンダリングの設定
+            options: {
+                wireframes: false, //ワイヤーフレームモードをoff
+                width: 1000, //canvasのwidth(横幅)
+                height: 480, //canvasのheight(高さ)
+                background: 'rgba(0, 0, 0, 0)'
+                
+            }
+        }
+    });
+    
+       //isStatic:地面を追加と壁を追加、静的(完全固定)
+    var ground = Bodies.rectangle(500, 480, 1000, 60, { isStatic: true });
+    var groundA = Bodies.rectangle(0, 500, 60, 1000, { isStatic: true });
+    var groundB = Bodies.rectangle(1000, 500, 60, 1000, { isStatic: true });    
+       // 円追加
+    for (var i = 0; i < 1000; i++) { //1000個の要素円を追加
+        var rnd = parseInt(Math.random() * 10);
+        var x = 100 + (i%80)*10;
+        var y = 0 - (i/80)*10;   
+        World.add(engine.world, [Bodies.circle(x, y, 5, {
+            density: 0.001, // 密度: 単位面積あたりの質量
+            restitution: 0.7, // 弾力性
+            friction: 0.2, // 本体の摩擦
+        })]);
+    }
+    World.add(engine.world, [ground,groundA,groundB, {
+        restitution: 0.7, // 弾力性
+        friction: 0.2, // 本体の摩擦
+    }]);
+　  //以下は処理速度計測用
+    var i = 0;
+    var timer = 0.0;
+    var start = 0.0;
+    var end = 0.0;
+    //フレーム毎に実行
+    Matter.Events.on(engine, 'beforeUpdate', function() {
+        //console.time("loop time");
+        start = performance.now();
+        i += 1;
+    });
+    Matter.Events.on(engine, 'afterUpdate', function() {
+        //console.timeEnd("loop time");
+        end = performance.now();
+        timer +=end-start
+        console.log(end-start);
+        console.log(i);
+        if(i>1000){
+            Matter.Events.off(engine)
+            Engine.clear(engine);
+            console.log("平均処理時間:",timer/1000);
+        }
+    });
+    // エンジン起動
+    Engine.run(engine);
+
+}
