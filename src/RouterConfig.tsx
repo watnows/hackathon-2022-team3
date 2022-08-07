@@ -4,7 +4,7 @@ import { App } from "./App"
 import { Service } from "./Service";
 import { Users } from "./Users ";
 import { Reccomend } from "./Reccomend";
-import { Liquredit } from "./Liquredit";
+import { Liquoredit } from "./Liquoredit";
 
 export const RouterConfig: React.VFC = () => {
     return (
@@ -12,11 +12,11 @@ export const RouterConfig: React.VFC = () => {
             <BrowserRouter>
                 <Routes>
                     <Route index element={<App />} />
-                    <Route path="liqur" element={<App />} />
+                    <Route path="liquor" element={<App />} />
                     <Route path="service" element={<Service />} />
                     <Route path="users" element={<Users />} />
                     <Route path="reccomend" element={<Reccomend />} />
-                    <Route path="liquredit" element={<Liquredit />} />
+                    <Route path="liquoredit" element={<Liquoredit />} />
                 </Routes>
             </BrowserRouter>
         </>

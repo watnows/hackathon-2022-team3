@@ -16,14 +16,15 @@ export function App() {
 
         <nav>
           <ul>
-            <li><a href="liqur">酒瓶</a></li>
+            <li><a href="liquor">酒瓶</a></li>
             <li><a href="/service">空瓶</a></li>
             <li><a href="./users">ユーザ</a></li>
             <li><a href="./reccomend">おすすめ</a></li>
           </ul>
         </nav>
         <p>酒瓶置き場</p>
-        <a href='./liquredit'>お酒の追加</a>
+        
+        <a href='./liquoredit'>お酒の追加</a>
       </article>
       <section className="side">
       </section>
