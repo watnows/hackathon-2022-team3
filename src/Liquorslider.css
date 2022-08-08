@@ -49,7 +49,7 @@
 
 
   .side {
-    background-color: #FED4D4;
+    /* background-color: #FED4D4; */
     -webkit-flex: 1;
     flex: 1;
   }
@@ -61,7 +61,8 @@
   }
   .slider {
     margin: 0 20px;
-    background-color: #650e0e;
+    /* color: #FF9A18; */
+    /* background-color: #650e0e; */
     /* flex: 0.5; */
     width: 10%;
     height: 200px;

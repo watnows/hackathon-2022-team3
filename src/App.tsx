@@ -5,6 +5,7 @@ import './FirebaseConfig'
 import { useState } from 'react';
 import Modal from './Modal';
 import { Header } from './ Header';
+import kakubin from "../src/flat_kakubin_700ml_full.png"
 
 
 export function App() {
@@ -13,27 +14,33 @@ export function App() {
   const Toggle = () => setModal(!modal);
 
   return (
-    <div className="flexbox">
-      <section className="side">
+    <div className="disp">
 
-      </section>
-      <article className="main">
-        <Header></Header>
-        <p>酒瓶置き場</p>
+      <div className="flexbox">
+        <section className="side">
 
-        <a href='./liquoredit'>お酒の追加</a>
-        <a href='./liquorslider'>酒スライダー</a>
-        <div className='modal'>
-          <button className='modalbutton' onClick={() => Toggle()}>
-            Modal
-          </button>
+        </section>
+        <article className="main">
+          <Header></Header>
+          <p>酒瓶置き場</p>
 
-          <Modal show={modal} close={Toggle} />
-        </div>
-      </article>
-      <section className="side">
-      </section>
+          <a href='./liquoredit'>お酒の追加</a>
+          <a href='./liquorslider'>酒スライダー</a>
+
+          <div className=''>
+            <button><img src={kakubin} alt="my image" onClick={() => Toggle()} /></button>
+          </div>
+
+
+        </article>
+        <section className="side">
+        </section>
+
+      </div>
+      <Modal show={modal} close={Toggle} />
+
     </div>
+
 
 
   );

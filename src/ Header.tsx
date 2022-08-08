@@ -3,7 +3,7 @@ import "./Header.css"
 export const Header = () => {
   return (
     <div className="header">
-      <h1>サイト名</h1>
+      <h1>nomicaki</h1>
       <div>
       <nav>
         <ul>

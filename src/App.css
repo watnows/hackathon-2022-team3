@@ -36,8 +36,12 @@
     transform: rotate(360deg);
   }
 }
+.disp{
+  height: 100vh;
+}
 @media ( min-width : 600px ){
   .flexbox {
+  height: 100%;
   display: -webkit-flex;
   display: flex;
   }
@@ -103,14 +107,60 @@ a:hover {
   margin-left: 0.5rem;
   font-weight: 800;
 }
+.modal__overlay{
+  /* position: fixed;
+  top: 0;
+  left: 0; */
+  /* width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0);
+  z-index: 100;
+  opacity: 0.5; */
+  /*¥¥
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  visibility: hidden;
+  transition: opacity .3s, visibility .3s; */
+
+  z-index: 999;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* 初期状態は非表示 */
+  opacity: 0;
+  visibility: hidden;
+  /* ゆっくり表示させる */
+  transition: opacity .3s, visibility .3s;
+}
+
+.is-opened{
+  visibility: visible;
+  opacity: 1;
+}
 
 .modal:nth-child(1) {
+  position: absolute;
   box-sizing: border-box;
-  width: 300px;
+  width: 600px;
+  height: 600px;
   text-align: center;
   padding: 20px;
   border: 1px solid #61dafb;
+  background: rgb(255, 255, 255);
   margin: auto;
+  margin-top: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
 }
 
 .close {
@@ -119,3 +169,9 @@ a:hover {
   right: 0;
   background: transparent;
 }
+
+
+/* .modal{
+  margin-top: 400px;
+
+} */
