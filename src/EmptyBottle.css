@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,900;1,700&display=swap');
+
 .App {
     text-align: center;
   }
@@ -95,3 +97,28 @@
   a:hover {
     color: rgb(59, 151, 193);
   }
+
+  .bottleCounter{
+    margin-left: auto;
+    margin-right: auto;
+    width: 400px;
+    height: 400px;
+    text-align: center;
+    color: #000000;
+    
+    font-family: 'Roboto', sans-serif;
+    /* border: dashed 2px #ffc3c3; */
+    border-radius: 8px;
+  }
+  .box15 {
+    padding: 0.2em 0.5em;
+    margin: 2em 0;
+    background: #ffeaea;
+    box-shadow: 0px 0px 0px 10px #ffeaea;
+    border: dashed 2px #ffc3c3;
+    border-radius: 8px;
+    }
+    .box15 p {
+        margin: 0; 
+        padding: 0;
+    }

@@ -2,9 +2,12 @@
 import React, { useEffect, useRef } from 'react';
 import Matter from 'matter-js';
 import './matterpractice.css'
-import logo from "./flat_kakubin_700ml_empty.png"
+//import logo from ".flat_kakubin_700ml_full_2.svg"
+import kakubin_700ml from "./flat_kakubin_700ml_empty.png"
+import gilbeysvodka_375ml from "./flat_gilbeysvodka_375ml_empty.png"
 
 export const MatterStepOne = () => {
+
   function getRandomInt(min, max) {
     min = Math.ceil(min);
     max = Math.floor(max);
@@ -14,6 +17,23 @@ export const MatterStepOne = () => {
   const boxRef = useRef(null);
   const canvasRef = useRef(null);
 
+  var bottles = [
+    {
+      "name": "gilbeysvodka_375ml",
+      "image": gilbeysvodka_375ml,
+      "width": 130,
+      "height": 291,
+    },
+    {
+      "name": "kakubin_700ml",
+      "image": kakubin_700ml,
+      "width": 113,
+      "height": 318,
+    }
+  ];
+
+  const bottleAmount = 2
+
   useEffect(() => {
     let Engine = Matter.Engine;
     let Render = Matter.Render;
@@ -21,6 +41,20 @@ export const MatterStepOne = () => {
     let Bodies = Matter.Bodies;
 
     let engine = Engine.create({});
+
+    //add
+    // <img id="foo" src="https://placehold.jp/300x300.png" width="500" height="500">
+
+    // <script>
+
+    // // img要素を取得
+    // let elm = document.getElementById("foo");
+
+    // // 幅を表示
+    // console.log(elm.naturalWidth); // 300
+
+    // // 高さを表示
+    // console.log(elm.naturalHeight); // 300
 
     let render = Render.create({
       element: boxRef.current,
@@ -37,81 +71,69 @@ export const MatterStepOne = () => {
     const floor = Bodies.rectangle(window.innerWidth / 2, window.innerHeight, window.innerWidth, 50, {
       isStatic: true,
       render: {
-        fillStyle: 'skyblue'
+        fillStyle: 'white'
       }
     });
 
     const wallleft = Bodies.rectangle(0, window.innerHeight / 2, 50, window.innerHeight, {
       isStatic: true,
       render: {
-        fillStyle: 'skyblue'
-
+        fillStyle: 'white'
       }
     });
 
     const wallright = Bodies.rectangle(window.innerWidth, window.innerHeight / 2, 50, window.innerHeight, {
       isStatic: true,
       render: {
-        fillStyle: 'skyblue'
+        fillStyle: 'white'
       }
     });
-
-    // const ball = Bodies.rectangle(200, 10, 20, 30,{
-    //   restitution: 0.9,
-    //   render: {
-    //     fillStyle: 'yellow'
-    //   }
-    // });
-
-    // const ball2 = Bodies.circle(200, 0, 10, {
-    //   restitution: 0.9,
-    //   render: {
-    //     fillStyle: 'red'
-    //   }
-    // });
-
-    // const ball3 = Bodies.circle(200, 0, 10, {
-    //   restitution: 0.9,
-    //   render: {
-    //     fillStyle: 'red'
-    //   }
-    // });
-
-    //World.add(engine.world, [floor, ball, ball2]);
 
     World.add(engine.world, [floor]);
     World.add(engine.world, [wallleft]);
     World.add(engine.world, [wallright]);
 
-    // setInterval(() => {
-    //   var ball = Bodies.circle(getRandomInt(100, 200), 0, 20, {
-    //     restitution: 0.9,
-    //     render: {
-    //       fillStyle: 'yellow'
-    //     }
-    //   });
-    //   World.add(engine.world, [ball]);      
-    // }, 1000);
+    // var image = new Image();
+    //   var width;
+    //   var height;
+      
+    //   image.onload = function(){
+    //     width = image.width;
+    //     height = image.height;
+    //   };
+      
+    // image.src = './flat_kakubin_700ml_full.png';
+    
+    var currentBottles = 0;
 
     setInterval(() => {
       // let img = new Image(100,100)
       // let imgurl = img.toDataURL("./logo.svg")
-      var ball = Bodies.rectangle(getRandomInt(450, 800), 0, 40, 120, {
-        restitution: 0.9,
-        render: {
-            //  fillStyle: 'yellow'
-          sprite:{
-          texture:logo
-          //texture:flat_kakubin_700ml_full
+      
+      if (currentBottles < bottleAmount){
+        var selectedBottle = bottles[getRandomInt(0, Object.keys(bottles).length)];
+
+        var selectedTexture = selectedBottle["image"]
+        var bottleWidth = selectedBottle["width"]
+        var bottleHeight = selectedBottle["height"]
+
+        var rectBody = Bodies.rectangle(getRandomInt(window.innerWidth/2 - 100, window.innerWidth/2 + 100), -200,(bottleWidth / 2) - 10, (bottleHeight / 2) - 10, {
+          restitution: 0.7,
+          render: {
+            sprite:{
+            texture: selectedTexture,
+            xScale: 0.5,
+            yScale: 0.5
+            }
           }
-        }
-      });
+        });
+      World.add(engine.world, [rectBody]);
+      currentBottles += 1;
+      document.getElementById("animatedBottleCounter").innerText = currentBottles
+      }
 
-      World.add(engine.world, [ball]);
-    }, 1000);
-
-
-
+    }, 1000 / bottleAmount);
+    
     Engine.run(engine);
     Render.run(render);
   }, []);
