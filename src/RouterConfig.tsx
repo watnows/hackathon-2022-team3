@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { App } from "./App"
 import { EmptyBottle } from "./EmptyBottle";
-import { Users } from "./Users ";
+import { Users } from "./Users";
 import { Reccomend } from "./Reccomend";
 import { Liquorslider } from "./Liquorslider";
 import { Liquoredit } from "./Liquoredit";

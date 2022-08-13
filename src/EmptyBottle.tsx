@@ -1,6 +1,6 @@
 import './EmptyBottle.css'
 import { MatterStepOne } from './matterpractice'
-import { Header } from './ Header'
+import { Header } from './Header'
 
 
 

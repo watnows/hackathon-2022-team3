@@ -32,7 +32,7 @@ export const MatterStepOne = () => {
     }
   ];
 
-  const bottleAmount = 2
+  const bottleAmount = 57
 
   useEffect(() => {
     let Engine = Matter.Engine;
@@ -117,7 +117,7 @@ export const MatterStepOne = () => {
         var bottleWidth = selectedBottle["width"]
         var bottleHeight = selectedBottle["height"]
 
-        var rectBody = Bodies.rectangle(getRandomInt(window.innerWidth/2 - 100, window.innerWidth/2 + 100), -200,(bottleWidth / 2) - 10, (bottleHeight / 2) - 10, {
+        var rectBody = Bodies.rectangle(getRandomInt(window.innerWidth/2 - 200, window.innerWidth/2 + 200), 400,(bottleWidth / 2) - 10, (bottleHeight / 2) - 10, {
           restitution: 0.7,
           render: {
             sprite:{

@@ -4,7 +4,7 @@ import './App.css';
 import './FirebaseConfig'
 import { useState } from 'react';
 import Modal from './Modal';
-import { Header } from './ Header';
+import { Header } from './Header';
 import kakubin from "../src/flat_kakubin_700ml_full.png"
 
 

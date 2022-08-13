@@ -1,5 +1,5 @@
 import './Reccomend.css'
-import { Header } from './ Header'
+import { Header } from './Header'
 export const Reccomend = () => {
     return(
         <div className="flexbox">
